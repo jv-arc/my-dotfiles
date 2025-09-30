@@ -1,0 +1,69 @@
+[config]
+version_check = false
+
+
+[config.custom_colors]
+bright_red = "#ff3232"
+bright_green = "#32ff32"
+bright_yellow = "#feff32"
+bright_blue = "#3232ff"
+bright_purple = "#ff32fe"
+bright_aqua = "#32feff"
+bright_orange = "#ff9932"
+neutral_red = "#d60000"
+neutral_green = "#00d600"
+neutral_yellow = "#d6d600"
+neutral_blue = "#0000d6"
+neutral_purple = "#d600d6"
+neutral_aqua = "#00d6d6"
+neutral_orange = "#d66b00"
+faded_red = "#a80000"
+faded_green = "#00a800"
+faded_yellow = "#a8a800"
+faded_blue = "#0000a8"
+faded_purple = "#a800a8"
+faded_aqua = "#00a8a8"
+faded_orange = "#a85400"
+
+
+[templates.m3colors]
+input_path = '~/.config/matugen/templates/colors.json'
+output_path = '~/.local/state/quickshell/user/generated/colors.json'
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland/colors.conf'
+output_path = '~/.config/hypr/hyprland/colors.conf'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/hyprland/hyprlock-colors.conf'
+output_path = '~/.config/hypr/hyprlock/colors.conf'
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/templates/fuzzel/fuzzel_theme.ini'
+output_path = '~/.config/fuzzel/fuzzel_theme.ini'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.kde_colors]
+input_path = '~/.config/matugen/templates/kde/color.txt'
+output_path = '~/.local/state/quickshell/user/generated/color.txt'
+
+[templates.wallpaper]
+input_path = '~/.config/matugen/templates/wallpaper.txt'
+output_path = '~/.local/state/quickshell/user/generated/wallpaper/path.txt'
+
+[templates.obsidian]
+input_path = '~/.config/matugen/templates/obsidian/theme.css'
+output_path = '~/Documentos/vault/.obsidian/themes/Matugen/theme.css'
+
+
+[templates.pywalfox]
+input_path = '~/.config/matugen/templates/pywalfox/pywalfox-colors.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
