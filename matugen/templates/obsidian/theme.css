@@ -87,9 +87,9 @@
 
 body
 {
-    --accent-h-raw: {{ colors.primary_container.default.hue }};
-    --accent-s-raw: {{ colors.primary_container.default.saturation }};
-    --accent-l-raw: {{ colors.primary_container.default.lightness }};
+    --accent-h-raw: {{ colors.primary_container.dark.hue }};
+    --accent-s-raw: {{ colors.primary_container.dark.saturation }};
+    --accent-l-raw: {{ colors.primary_container.dark.lightness }};
 
     --accent-h:     round(var(--accent-h-raw), 1);
     --accent-s:     round(calc(var(--accent-s-raw) * 1%), 0.1%);

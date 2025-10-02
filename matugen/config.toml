@@ -67,3 +67,7 @@ output_path = '~/Documentos/vault/.obsidian/themes/Matugen/theme.css'
 input_path = '~/.config/matugen/templates/pywalfox/pywalfox-colors.json'
 output_path = '~/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
+
+[templates.vscode]
+input_path = '~/.config/matugen/templates/vscode/vscode-color-theme.json'
+output_path = '~/.vscode/extensions/hyprluna.hyprluna-theme-1.0.2/themes/hyprluna.json'
