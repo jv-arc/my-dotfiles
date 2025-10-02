@@ -87,6 +87,13 @@
 
 body
 {
+    --accent-h-raw: {{ colors.primary_container.default.hue }};
+    --accent-s-raw: {{ colors.primary_container.default.saturation }};
+    --accent-l-raw: {{ colors.primary_container.default.lightness }};
+
+    --accent-h:     round(var(--accent-h-raw), 1);
+    --accent-s:     round(calc(var(--accent-s-raw) * 1%), 0.1%);
+    --accent-l:     round(calc(var(--accent-l-raw) * 1%), 0.1%);
 
     --link-decoration:                none;
     --link-decoration-hover:          none;
@@ -111,15 +118,6 @@ body
 
 .theme-dark
 {
-    --accent-h-raw: {{ colors.primary_container.dark.hue }};
-    --accent-s-raw: {{ colors.primary_container.dark.saturation }};
-    --accent-l-raw: {{ colors.primary_container.dark.lightness }};
-
-    --accent-h: round(var(--accent-h-raw), 1);
-    --accent-s: round(calc(var(--accent-s-raw) * 1%), 0.1%);
-    --accent-l: round(calc(var(--accent-l-raw) * 1%), 0.1%);
-
-
     --color-red-rgb:                 var(--neutral-red_x);
     --color-red:                     var(--neutral-red);
     --color-purple-rgb:              var(--neutral-purple_x);
@@ -230,15 +228,6 @@ body
 
 .theme-light
 {
-    --accent-h-raw: {{ colors.primary_container.light.hue }};
-    --accent-s-raw: {{ colors.primary_container.light.saturation }};
-    --accent-l-raw: {{ colors.primary_container.light.lightness }};
-
-    --accent-h: round(var(--accent-h-raw), 1);
-    --accent-s: round(calc(var(--accent-s-raw) * 1%), 0.1%);
-    --accent-l: round(calc(var(--accent-l-raw) * 1%), 0.1%);
-
-
     --color-red-rgb:                 var(--neutral-red_x);
     --color-red:                     var(--neutral-red);
     --color-purple-rgb:              var(--neutral-purple_x);
