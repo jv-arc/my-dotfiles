@@ -1,6 +1,6 @@
 {
     "name": "HyprLuna",
-    "type": "bright",
+    "type": "dark",
     "semanticHighlighting": true,
     "semanticTokenColors": {
       "enumMember": {
@@ -1897,6 +1897,9 @@
       "terminal.ansiBrightMagenta": "{{colors.bright_purple.default.hex}}",
       "terminal.ansiBrightCyan": "{{colors.bright_aqua.default.hex}}",
       "terminal.ansiBrightWhite": "{{colors.bright_white.default.hex}}",
+      "terminal.selectionBackground": "{{colors.surface_container_lowest.default.hex}}00",
+      "terminal.inactiveSelectionBackground": "{{colors.surface_container_lowest.default.hex}}00",
+      "terminal.dropBackground": "{{colors.surface_container_lowest.default.hex}}00",
       "terminalCursor.background": "{{colors.background.default.hex}}",
       "terminalCursor.foreground": "{{colors.primary.default.hex}}",
       "notificationCenter.border": "{{colors.outline.default.hex}}",
