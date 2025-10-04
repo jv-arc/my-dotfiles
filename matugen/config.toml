@@ -3,6 +3,8 @@ version_check = false
 
 
 [config.custom_colors]
+bright_black = "#444444"
+bright_white = "#ffffff"
 bright_red = "#ff3232"
 bright_green = "#32ff32"
 bright_yellow = "#feff32"
@@ -10,6 +12,8 @@ bright_blue = "#3232ff"
 bright_purple = "#ff32fe"
 bright_aqua = "#32feff"
 bright_orange = "#ff9932"
+neutral_black = "#000000"
+neutral_white = "#f0f0f0"
 neutral_red = "#d60000"
 neutral_green = "#00d600"
 neutral_yellow = "#d6d600"
