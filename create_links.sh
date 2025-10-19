@@ -6,7 +6,7 @@ DEBUG="false"
 SOURCE_PATH=$(pwd)
 TARGET_PATH="/home/$USER/.config"
 
-DIR_LIST=( "hypr" "matugen")
+DIR_LIST=( "hypr" "matugen" "tampermonkey" "nvim") 
 
 
 while getopts "$OPTSTRINGS" OPT; do
@@ -33,7 +33,7 @@ if [[ ! "$DEBUG"=="true" ]]; then
 fi
 
 for DIR in "${DIR_LIST[@]}"; do
-    
+
     FULL_TARGET="$TARGET_PATH/$DIR"
     FULL_SOURCE="$SOURCE_PATH/$DIR"
 
