@@ -67,6 +67,8 @@ vim.keymap.set('n', '<leader>t',
 	end
 )
 
+require('telescope').load_extension('projects')
+vim.keymap.set('n', '<leader>fp', '<cmd>Telescope projects<cr>')
 vim.opt.foldlevel = 15
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
