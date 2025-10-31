@@ -26,4 +26,12 @@ return {
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
 	},
+--	config = function()
+--		vim.keymap.set('n',   "<leader>gB", function() Snacks.gitbrowse() end  )
+--		vim.keymap.set('n',   "<leader>gb", function() Snacks.picker.git_branches() end, { desc = "Git Branches"})
+--		vim.keymap.set('n',   "<leader>gl", function() Snacks.picker.git_log() end, { desc = "Git Log"})
+--		vim.keymap.set('n',   "<leader>gs", function() Snacks.picker.git_status() end, {desc = "Git Status" })
+--		vim.keymap.set('n',   "<leader>gd", function() Snacks.picker.git_diff() end, {desc = "Git Diff (Hunks)"})
+--		vim.keymap.set('n',   "<leader>gf", function() Snacks.picker.git_log_file() end, {desc = "Git Log File"})
+--	end
 }

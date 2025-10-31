@@ -75,7 +75,6 @@ post_hook = 'pywalfox update'
 input_path = '~/.config/matugen/templates/vscode/vscode-color-theme.json'
 output_path = '~/.vscode/extensions/hyprluna.hyprluna-theme-1.0.2/themes/hyprluna.json'
 
-
 [templates.perplexity]
 input_path = '~/.config/matugen/templates/perplexity/ppx-matugen-colors.json'
 output_path = '~/.config/tampermonkey/ppx-matugen-colors.json'

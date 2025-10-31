@@ -7,4 +7,5 @@ return {
 			colors = require("assets.matugen"),
 		})
 	end
+
 }
