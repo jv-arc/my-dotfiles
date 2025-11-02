@@ -3,7 +3,7 @@
 OPTSTRINGS=":d"
 DEBUG="false"
 
-SOURCE_PATH=$(pwd)
+SOURCE_PATH=$(pwd/..)
 TARGET_PATH="/home/$USER/.config"
 
 DIR_LIST=( "hypr" "matugen" "tampermonkey" "nvim") 

@@ -1,8 +1,46 @@
 [config]
 version_check = false
 
-
 [config.custom_colors]
+extra_onSuccess_dark = '#213528'
+extra_successContainer_dark = '#374B3E'
+extra_onSuccessContainer_dark = '#D1E9D6'
+extra_success_light = '#4F6354'
+extra_onSuccess_light = '#FFFFFF'
+extra_successContainer_light = '#D1E8D5'
+extra_onSuccessContainer_light = '#0C1F13'
+term0_dark = "#282828"
+term1_dark = "#CC241D"
+term2_dark = "#98971A"
+term3_dark = "#D79921"
+term4_dark = "#458588"
+term5_dark = "#B16286"
+term6_dark = "#689D6A"
+term7_dark = "#A89984"
+term8_dark = "#928374"
+term9_dark = "#FB4934"
+term10_dark = "#B8BB26"
+term11_dark = "#FABD2F"
+term12_dark = "#83A598"
+term13_dark = "#D3869B"
+term14_dark = "#8EC07C"
+term15_dark = "#EBDBB2"
+term0_light = "#FDF9F3"
+term1_light = "#FF6188"
+term2_light = "#A9DC76"
+term3_light = "#FC9867"
+term4_light = "#FFD866"
+term5_light = "#F47FD4"
+term6_light = "#78DCE8"
+term7_light = "#333034"
+term8_light = "#121212"
+term9_light = "#FF6188"
+term10_light = "#A9DC76"
+term11_light = "#FC9867"
+term12_light = "#FFD866"
+term13_light = "#F47FD4"
+term14_light = "#78DCE8"
+term15_light = "#333034"
 bright_black = "#444444"
 bright_white = "#ffffff"
 bright_red = "#ff3232"
@@ -80,6 +118,6 @@ input_path = '~/.config/matugen/templates/perplexity/ppx-matugen-colors.json'
 output_path = '~/.config/tampermonkey/ppx-matugen-colors.json'
 
 [templates.nvim]
-input_path = '~/.config/matugen/templates/nvim/matugen.lua'
-output_path = '~/.config/nvim/lua/assets/matugen.lua'
-
+input_path = '~/.config/matugen/templates/generic/hex.lua'
+output_path = '~/.config/nvim/lua/assets/matugen_all.lua'
+post_hook = 'bash ~/0/my-dotfiles/scripts/send-reload-command-to-nvim.sh'

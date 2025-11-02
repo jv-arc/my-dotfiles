@@ -1,0 +1,18 @@
+return {
+	base00 = "{{colors.neutral_black.default.hex}}",
+	base01 = "{{colors.neutral_red.default.hex}}",
+	base02 = "{{colors.neutral_green.default.hex}}",
+	base03 = "{{colors.neutral_yellow.default.hex}}",
+	base04 = "{{colors.neutral_blue.default.hex}}",
+	base05 = "{{colors.neutral_purple.default.hex}}",
+	base06 = "{{colors.neutral_aqua.default.hex}}",
+	base07 = "{{colors.neutral_white.default.hex}}",
+	base08 = "{{colors.neutral_black.default.hex}}",
+	base09 = "{{colors.bright_red.default.hex}}",
+	base0A = "{{colors.bright_green.default.hex}}",
+	base0B = "{{colors.bright_yellow.default.hex}}",
+	base0C = "{{colors.bright_blue.default.hex}}",
+	base0D = "{{colors.bright_purple.default.hex}}",
+	base0E = "{{colors.bright_aqua.default.hex}}",
+	base0F = "{{colors.neutral_white.default.hex}}",
+}

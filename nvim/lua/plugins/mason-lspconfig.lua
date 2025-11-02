@@ -3,10 +3,10 @@ local server_names = {
 	"clangd",
 	"bashls",
 	"docker_compose_language_service",
-	"asm_lsp",
 	"fish_lsp",
 	"superhtml",
-	"cssls"
+	"cssls",
+	"ts_ls"
 }
 
 

@@ -1,0 +1,115 @@
+#! /usr/bin/env bash
+
+DIR=""
+BASE_DIR="/home/jvctr/Documentos"
+LIVROS="$BASE_DIR/Livros/"
+MANUAIS="$BASE_DIR/Manuais/"
+NAME=""
+DESTINATION_PATH="$(pwd)"
+DEBUG=""
+
+OPTIONS=":o:n:lmhd"
+
+if [[ $# -eq 0 ]]; then
+	echo "selecione ao menos uma opção"
+	exit 1
+fi
+
+LM_ERROR="Não é possível ler manuais(-m) e livros(-l) ao mesmo tempo, por favor escolha só um."
+DESTINATION_ERROR="O caminho de destino não existe."
+
+while getopts ${OPTIONS} selected_option; do
+	case ${selected_option} in
+		l)
+			if [[ -z $DIR ]]; then
+				DIR="$LIVROS"
+			else
+				echo "$LM_ERROR"
+				exit 1
+			fi
+			;;
+
+		m)
+			if [[ -z $DIR ]]; then
+				DIR="$MANUAIS"
+			else
+				echo "$LM_ERROR"
+				exit 1
+			fi
+			;;
+
+
+		d)
+			DEBUG="yes"
+			;;
+
+
+		:)
+			echo "A opção -${OPTARG} necessita de um argumento."
+			exit 1
+			;;
+
+
+		o)
+			DESTINATION_PATH="${OPTARG}"
+			;;
+
+
+		n)
+			NAME="${OPTARG}"
+			;;
+
+		h)
+			echo "-m para manuais, -l para livros, -o para escolher destino e -n para escolher o nome do link"
+			exit 1
+			;;
+
+		?)
+			echo "Erro"
+			echo "opção -${OPTARG} não reconhecida"
+			echo "use -h para obter ajuda"
+			exit 1
+			;;
+	esac
+done
+
+
+
+if [ ! -d "$DESTINATION_PATH" ]; then
+	echo "Caminho de destino ${DESTINATION_PATH} não existe"
+	exit 1
+fi
+
+if [ ! -d "$DIR" ]; then
+	echo "Caminho de origem ${DIR} não existe"
+	exit 1
+fi
+
+
+
+SELECTED_FILE=$(find "$DIR" -type f| while read -r file
+do
+	echo "${file##*/}"
+done | fzf)
+
+if [[ -z "$SELECTED_FILE" ]]; then
+	echo "Nenhum arquivo selecionado, saindo do programa sem criar um link novo."
+	exit 1
+fi
+
+FILE_SOURCE_PATH="$DIR/$SELECTED_FILE"
+
+if [[ -z "$NAME" ]]; then
+	NAME="$SELECTED_FILE"
+fi
+
+DESTINATION_PATH="${DESTINATION_PATH}/${NAME}"
+
+if [[ ! -z "$DEBUG" ]]; then
+	echo "DEBUG: source=$FILE_SOURCE_PATH"
+	echo "DEBUG: destinatio=$DESTINATION_PATH"
+fi
+
+
+
+ln -s "$FILE_SOURCE_PATH" "$DESTINATION_PATH"

@@ -12,7 +12,7 @@ return {
 		dashboard = {
 			preset = {
 				pick = nil,
-				header = require("assets.wired_faded"), 
+				header = require("assets.neovim-sharp-nerdfont")
 			},
 		},
 		explorer = { enabled = false },
@@ -26,6 +26,10 @@ return {
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
 	},
+	dependencies = {
+		{ 'nvim-mini/mini.icons', opts = {} },
+		{ "nvim-tree/nvim-web-devicons", opts = {} }
+	}
 --	config = function()
 --		vim.keymap.set('n',   "<leader>gB", function() Snacks.gitbrowse() end  )
 --		vim.keymap.set('n',   "<leader>gb", function() Snacks.picker.git_branches() end, { desc = "Git Branches"})
