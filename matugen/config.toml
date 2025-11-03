@@ -119,5 +119,5 @@ output_path = '~/.config/tampermonkey/ppx-matugen-colors.json'
 
 [templates.nvim]
 input_path = '~/.config/matugen/templates/generic/hex.lua'
-output_path = '~/.config/nvim/lua/assets/matugen_all.lua'
+output_path = '~/.config/nvim/lua/assets/matugen_colors.lua'
 post_hook = 'bash ~/0/my-dotfiles/scripts/send-reload-command-to-nvim.sh'

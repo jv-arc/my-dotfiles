@@ -16,10 +16,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Leader key
 vim.g.mapleader = ' '
 
--- vim.cmd.colorscheme = nil
-vim.cmd("set t_Co=256")
 
--- Line numbers and highlight
+vim.o.cursorline = true
+vim.o.list = true
+
+
+-- vim.cmd.colorscheme = nil
+--vim.cmd("set t_Co=256")
+
 vim.opt.foldlevel = 15
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"

@@ -1,21 +1,13 @@
 
 local h2c = require("functions.hextochroma")
 
-local function reload_colorscheme()
-	if mini ~= nil then
-		if mini.base16 ~= nil then
+local function load_colorscheme()
 			package.loaded["mini.base16"] = nil
-		end
-	end
-	if assets ~= nil then
-		if assets.matugen_all ~= nil then
-			package.loaded["assets.matugen_all"] = nil
-		end
-	end
+			package.loaded["assets.matugen_colors"] = nil
 	collectgarbage("collect")
 
 	local mode = "mini_palette"
-	local palette = require("assets.matugen_all")
+	local palette = require("assets.matugen_colors")
 
 	if mode == "mini_palette" then
 		require("mini.base16").setup({
@@ -23,9 +15,9 @@ local function reload_colorscheme()
 		})
 	elseif mode == "palette" then
 		require("mini.base16").setup({
-			palette = require("assets.matugen_all"),
+			palette = require("assets.matugen_colors"),
 		})
 	end
 end
 
-return reload_colorscheme
+return load_colorscheme

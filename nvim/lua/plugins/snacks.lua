@@ -1,18 +1,15 @@
-return { 
+return {
 	"folke/snacks.nvim",
 	priority = 1000,
 	lazy = false,
 	---@type snacks.Config
 	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
 		bigfile = { enabled = true },
 		---@class snacks.dashboard.Config
 		dashboard = {
 			preset = {
 				pick = nil,
-				header = require("assets.neovim-sharp-nerdfont")
+				header = require("assets.wired_faded")
 			},
 		},
 		explorer = { enabled = false },
@@ -27,15 +24,7 @@ return {
 		words = { enabled = true },
 	},
 	dependencies = {
-		{ 'nvim-mini/mini.icons', opts = {} },
+		{ "nvim-mini/mini.icons", opts = {} },
 		{ "nvim-tree/nvim-web-devicons", opts = {} }
 	}
---	config = function()
---		vim.keymap.set('n',   "<leader>gB", function() Snacks.gitbrowse() end  )
---		vim.keymap.set('n',   "<leader>gb", function() Snacks.picker.git_branches() end, { desc = "Git Branches"})
---		vim.keymap.set('n',   "<leader>gl", function() Snacks.picker.git_log() end, { desc = "Git Log"})
---		vim.keymap.set('n',   "<leader>gs", function() Snacks.picker.git_status() end, {desc = "Git Status" })
---		vim.keymap.set('n',   "<leader>gd", function() Snacks.picker.git_diff() end, {desc = "Git Diff (Hunks)"})
---		vim.keymap.set('n',   "<leader>gf", function() Snacks.picker.git_log_file() end, {desc = "Git Log File"})
---	end
 }

@@ -7,11 +7,8 @@ vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal toggle left<CR>')
 
 vim.keymap.set('n', 'zj', 'o<Esc>k')
 vim.keymap.set('n', 'zk', 'O<Esc>j')
-
-
-
-
-vim.keymap.set('n', '<leader>t', 
+vim.keymap.set('n', '<leader>fp', ':NeovimProjectDiscover default<CR><Esc>')
+vim.keymap.set('n', '<leader>t',
 	function() Snacks.terminal.toggle(
 		"fish",
 		{
@@ -26,6 +23,9 @@ vim.keymap.set('n', '<leader>t',
 	)
 	end
 )
+
+
+
 
 -- vim.keymap.set('n', '<leader>fp', '<cmd>Telescope projects<cr>')
 -- Git Browse (open file/commit/branch in browser)

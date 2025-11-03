@@ -1,4 +1,4 @@
-local load_config = require("functions.reload_colorscheme")
+local load_config = require("functions.load_matugen_colors")
 
 return {
 	"echasnovski/mini.base16",
