@@ -1,0 +1,45 @@
+﻿# Intel Corporation Software and/or Intellectual Property License File
+# Issued 06 October 2025
+# Upgrade to these products will no longer be available after the Maintenance Expiration  
+# date unless licenses are renewed.  
+# Fixed Node License
+# Primary Machine Name-notebook-manjaro-2025
+# Primary Machine ID-NIC ID 60C7270113B2
+# Companion ID-N/A
+# Companion ID 2-N/A
+# Product License Summary:
+# 4 Nios® V/m Microcontroller FPGA IP (License: IP-NIOSVM), 1 Seat(s)
+# - Maintenance Expiration of 2026.10
+# 3 Questa*- FPGA Starter Edition (License: SW-QUESTA), 1 Seat(s)
+# - Maintenance Expiration of 2026.10
+# - License Expires 06-Oct-2026
+################################################################################ 
+# FEATURE START 
+# The following is a license file for Nios® V/m Microcontroller Intel® FPGA IP 
+# Number of seat licenses is 1 
+# No license expiration date 
+FEATURE 6AF8_D036 alterad 2026.10 permanent uncounted 03B574E6D465 \
+	VENDOR_STRING=2ljMZpIlaiIUTdWyXieG5l HOSTID=60c7270113b2 TS_OK \
+	SIGN="0839 A088 E85B 6994 0972 870F D8F3 8FE3 077E 7238 58F4 \
+	6F7E C595 ACCC 7360 0D20 4F60 CB0A FB71 E29D 3565 EF09 E5BE \
+	F1EA 6A8C 4A7A 128D 98EC EEDA 01BD"
+FEATURE 6AF7_D036 alterad 2026.10 permanent uncounted 2BC55275CFE0 \
+	VENDOR_STRING="iiiiiiiihdLkhIIIIIIIIUPDuiaaaaaaaa11X38DDDDDDDDpjz5cddddddddtmGzGJJJJJJJJbqIh0uuuuuuuugYYWiVVVVVVVVbp0FVHHHHHHHHBUEakffffffffD2FFRkkkkkkkkWL$84" \
+	HOSTID=60c7270113b2 TS_OK SIGN="0090 B203 471B 8CC5 128A 391D \
+	6621 BA91 F8DF 0224 A2A0 0CD0 24C3 9289 EB41 04DF F88B 3D20 \
+	A698 DD3C 7CB2 1F58 EBE2 DBFD A5C8 B923 D3F3 1A50 1EEC C8FD"
+# FEATURE END 
+################################################################################
+# FEATURE START 
+# This is license file for Questasim*-Intel FPGA Starter Edition 
+# Number of seat licenses is 1 
+# License Expires 06-Oct-2026 
+DAEMON mgcld path_to_mgcld
+INCREMENT intelqsimstarter mgcld 2026.10 06-oct-2026 uncounted \
+    4F7BC2360540D4AC6419 VENDOR_STRING=E60CFBBB HOSTID=60c7270113b2 \
+    ISSUER=Intel SN=1100242340 SIGN2="0165 75FF F214 8B02 EF12 02A1 37DD \
+    8728 F514 EF5E B5AB 8FF3 C036 0F8C 80D0 0EDB DF60 4A66 3CFA 9032 7DAF \
+    CAA6 EC7D 2D76 7A8E 1AAB 655D 4D94 EABF 47D2"
+# FEATURE END 
+################################################################################
+# End of Intel Corporation Software and/or Intellectual Property License File. Issued 10/06/2025
