@@ -12,7 +12,7 @@
 #!/usr/bin/env bash
 
 
-ENV_PATH=$(pwd)
+ENV_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Define project path
 PROJECT_DIR="/home/$USER/0/POLIno_qsys/quartus_project"

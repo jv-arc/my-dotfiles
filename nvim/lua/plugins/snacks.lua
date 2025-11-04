@@ -11,6 +11,30 @@ return {
 				pick = nil,
 				header = require("assets.wired_faded")
 			},
+		---@type snacks.image.Config
+		image = {
+			formats = {
+				"png",
+				"jpg",
+				"jpeg",
+				"gif",
+				"bmp",
+				"webp",
+				"tiff",
+				"heic",
+				"avif",
+				"mp4",
+				"mov",
+				"avi",
+				"mkv",
+				"webm",
+				"pdf",
+				"icns",
+				},
+			doc = {
+				enabled = true
+				},
+			},
 		},
 		explorer = { enabled = false },
 		indent = { enabled = true },
