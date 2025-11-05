@@ -2,14 +2,17 @@
 
 COMMAND='<Esc>:lua reload_matugen_colors()<CR>'
 
-NVIM_SOCKET="${XDG_RUNTIME_DIR}/nvim.sock"
+DIR="$XDG_RUNTIME_DIR"
+PREFIX="nvim"
+SUFIX=".sock"
 
-if [ -S "$NVIM_SOCKET" ]
-then
-	nvim --server "$NVIM_SOCKET" --remote-send "$COMMAND"
-	exit 0
-else 
-	exit 1
-fi
+mapfile -t SOCKET_LIST < <(find "$DIR" -name "nvim*.sock" -type f -print 2>/dev/null)
 
+echo "${SOCKET_LIST[@]}"
+for FILE in "${SOCKET_LIST[@]}"; do
+  echo "$FILE"
+	#nvim --server "$FILE" --remote-send "$COMMAND"
+done
+
+exit 0
 

@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+kitty -T obsidian-nvim nvim "$@"
+exec bash
+
