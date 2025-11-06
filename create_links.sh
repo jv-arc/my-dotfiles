@@ -7,7 +7,7 @@ SOURCE_PATH=$(pwd)
 CONFIG_PATH="/home/$USER/.config"
 HOME_PATH="/home/$USER"
 
-CONFIG_LIST=( "hypr" "matugen" "tampermonkey" "nvim" )
+CONFIG_LIST=( "hypr" "matugen" "tampermonkey" "nvim" "fish" )
 HOME_LIST=( ".venv_manager" )
 
 while getopts "$OPTSTRINGS" OPT; do
