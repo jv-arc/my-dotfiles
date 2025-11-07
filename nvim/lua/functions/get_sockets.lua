@@ -8,10 +8,16 @@ local function is_socket_active(socket_path)
 	end
 end
 
-local function get_next_socket(socket_prefix, base_dir)
-	local base_dir = (base_dir == nil) and os.getenv("XDG_RUNTIME_DIR") or base_dir
+local function get_next_socket(socket_prefix, input_dir)
+	local base_dir
+	if (input_dir == nil) then
+		base_dir = os.getenv("XDG_RUNTIME_DIR")
+	else
+		base_dir = input_dir
+	end
+
 	for counter = 0, 99 do
-		local socket_path = string.format("%s/%s%d.sock", base_dir, socket_prefix, counter)
+		local socket_path = string.format("/%s/nvim/%s%d.sock", base_dir, socket_prefix, counter)
 		if not is_socket_active(socket_path) then
 			return socket_path
 		end

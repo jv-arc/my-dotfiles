@@ -63,7 +63,7 @@ output_path = '~/.local/state/quickshell/user/generated/wallpaper/path.txt'
 
 [templates.obsidian]
 input_path = '~/.config/matugen/templates/obsidian/theme.css'
-output_path = '~/Documentos/vault/.obsidian/themes/Matugen/theme.css'
+output_path = '~/Documentos/obsidian-sync/vault/.obsidian/themes/Matugen/theme.css'
 
 [templates.pywalfox]
 input_path = '~/.config/matugen/templates/pywalfox/pywalfox-colors.json'
