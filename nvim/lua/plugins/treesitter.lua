@@ -4,15 +4,15 @@ return {
 	config = function ()
 		local configs = require("nvim-treesitter.configs")
 		configs.setup({
-			ensure_installed = 
+			ensure_installed =
 				{
 					"c",
+					"cpp",
 					"lua",
 					"make",
 					"css",
 					"bash",
 					"asm",
-					"cpp",
 					"dockerfile",
 					"git_rebase",
 					"gitcommit",
@@ -22,15 +22,18 @@ return {
 					"http",
 					"hyprlang",
 					"javascript",
+					"typescript",
 					"java",
 					"json",
 					"nasm",
+					"java",
 					"python",
 					"sql",
 					"tcl",
 					"toml",
 					"yaml",
-					"verilog"
+					"verilog",
+					"vhdl"
 				},
 			sync_install = false,
 			highlight = { enable = true },

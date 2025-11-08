@@ -17,7 +17,7 @@ local function get_next_socket(socket_prefix, input_dir)
 	end
 
 	for counter = 0, 99 do
-		local socket_path = string.format("/%s/nvim/%s%d.sock", base_dir, socket_prefix, counter)
+		local socket_path = string.format("/%s/%s%d.sock", base_dir, socket_prefix, counter)
 		if not is_socket_active(socket_path) then
 			return socket_path
 		end

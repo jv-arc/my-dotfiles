@@ -20,9 +20,7 @@ vim.g.mapleader = ' '
 vim.o.cursorline = true
 vim.o.list = true
 
-
--- vim.cmd.colorscheme = nil
---vim.cmd("set t_Co=256")
+vim.opt.scrolloff = 8
 
 vim.opt.foldlevel = 15
 vim.opt.foldmethod = "expr"

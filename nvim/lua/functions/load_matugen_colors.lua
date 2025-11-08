@@ -7,17 +7,21 @@ local function load_colorscheme()
 	collectgarbage("collect")
 
 	local mode = "mini_palette"
-	local palette = require("assets.matugen_colors")
+	local fpalette = require("assets.matugen_colors")
 
 	if mode == "mini_palette" then
 		require("mini.base16").setup({
-			palette = require("mini.base16").mini_palette(palette.surface, palette.on_surface, h2c(palette.primary)),
+			palette = require("mini.base16").mini_palette(fpalette.surface, fpalette.on_surface, h2c(fpalette.primary)),
 		})
 	elseif mode == "palette" then
 		require("mini.base16").setup({
-			palette = require("assets.matugen_colors"),
+			palette = fpalette,
 		})
 	end
+
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
 end
 
 return load_colorscheme
