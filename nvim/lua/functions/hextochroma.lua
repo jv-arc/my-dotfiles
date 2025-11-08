@@ -1,4 +1,4 @@
-function hexToChroma(hexColor)
+local function hexToChroma(hexColor)
 	hexColor = hexColor:gsub("#", "")
 
 	local r = tonumber(hexColor:sub(1, 2), 16)
