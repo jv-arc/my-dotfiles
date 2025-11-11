@@ -26,6 +26,7 @@ return {
 				vim.lsp.enable(server_names)
 				vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 				vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+				vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
 				vim.keymap.set('n', '<leader>K', vim.lsp.buf.code_action , {})
 			end
 		},

@@ -19,4 +19,9 @@ vim.fn.serverstart(socket_path)
 
 
 
-
+vim.filetype.add({
+  extension = {
+    vh = "verilog",      -- or 'systemverilog' if you prefer everything as sv
+    svh = "systemverilog"
+  }
+})
