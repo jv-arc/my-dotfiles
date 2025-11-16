@@ -13,7 +13,7 @@ local function hexToChroma(hexColor)
 		if c <= 0.04045 then
 			return c / 12.92
 		else
-			return math.pow((c + 0.055) / 1.055, 2.4)
+			return ((c + 0.055) / 1.055)^(2.4)
 		end
 	end
 
@@ -34,7 +34,7 @@ local function hexToChroma(hexColor)
 
 	local function f(t)
 		if t > epsilon then
-			return math.pow(t, 1/3)
+			return t^(1/3)
 		else
 			return (kappa * t + 16) / 116
 		end
@@ -44,7 +44,7 @@ local function hexToChroma(hexColor)
 	local fy = f(y)
 	local fz = f(z)
 
-	local L = 116 * fy - 16
+	--local L = 116 * fy - 16
 	local a = 500 * (fx - fy)
 	local b_lab = 200 * (fy - fz)
 

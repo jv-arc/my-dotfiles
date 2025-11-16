@@ -27,7 +27,7 @@ vim.keymap.set('n', '<leader>t', function()
 				height = 0.2,
 			},
 			cwd = vim.fn.getcwd(),
-			interactive = true,
+			interactive = false,
 		}
 	)
 	end
@@ -35,7 +35,7 @@ vim.keymap.set('n', '<leader>t', function()
 
 
 
-
+-- TODO: Find out the best way of doing this
 -- vim.keymap.set('n', '<leader>fp', '<cmd>Telescope projects<cr>')
 -- Git Browse (open file/commit/branch in browser)
 -- vim.keymap.set('n',   "<leader>gB", function() Snacks.gitbrowse() end  )  
@@ -46,3 +46,15 @@ vim.keymap.set('n', '<leader>t', function()
 -- vim.keymap.set('n',   "<leader>gd", function() Snacks.picker.git_diff() end, {desc = "Git Diff (Hunks)"}) 
 -- vim.keymap.set('n',   "<leader>gf", function() Snacks.picker.git_log_file() end, {desc = "Git Log File"})
 
+
+
+-- TODO: Find out how to insert txt on lines
+-- Comment Box keybindings
+local cb_opts = {noremap = true, silent = true }
+vim.keymap.set({'n', 'v'}, '<leader>cb', '<Cmd>CBccbox<CR>', cb_opts)
+vim.keymap.set({'n', 'v'}, '<leader>ct', '<Cmd>CBllline<CR>', cb_opts)
+vim.keymap.set('n', '<leader>cl', '<Cmd>CBline<CR>', cb_opts)
+vim.keymap.set({'n','v'}, '<leader>cy', '<Cmd>CBy<CR>', cb_opts)
+vim.keymap.set({'n','v'}, '<leader>cd', '<Cmd>CBd<CR>', cb_opts)
+vim.keymap.set('n', ']b', '/\\S\\zs\\s*╭<CR>zt')
+vim.keymap.set('n', '[b', '?\\S\\zs\\s*╭<CR>zt')
