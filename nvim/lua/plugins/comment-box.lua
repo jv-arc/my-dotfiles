@@ -1,3 +1,3 @@
 return {
-	{ "LudoPinelli/comment-box.nvim", }
+	{ "LudoPinelli/comment-box.nvim", },
 }

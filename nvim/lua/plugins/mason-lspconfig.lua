@@ -1,5 +1,6 @@
 local server_names = {
 	"lua_ls",
+	"omnisharp",
 	"clangd",
 	"bashls",
 	"docker_compose_language_service",

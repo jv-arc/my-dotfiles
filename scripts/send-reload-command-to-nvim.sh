@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMMAND='<Esc>:lua reload_matugen_colors()<CR>'
+COMMAND='<Esc>:lua Reload_matugen_colors()<CR>'
 
 DIR="$XDG_RUNTIME_DIR"
 
