@@ -26,6 +26,12 @@ vim.filetype.add({
   }
 })
 
+
+-- TODO: 
+-- * Put logic in a file in lua/functions folder
+-- * Put keymap in keymaps file
+
+
 local function align_upperline()
   local original_pos = vim.api.nvim_win_get_cursor(0)
 	print(original_pos[1], original_pos[2])
