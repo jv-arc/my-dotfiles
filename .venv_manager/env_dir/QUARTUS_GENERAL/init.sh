@@ -9,7 +9,7 @@
 # .fishrc or whatever might not be enough
 # ============================================
 
-#!/usr/bin/env bash
+#! /usr/bin/env bash
 
 
 ENV_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -74,7 +74,7 @@ QUARTUSBIN_DIR="$QUARTUS_ROOTDIR/bin"
 NIOS2BIN_DIR="$NIOS2_DIR/bin"
 
 # Exporting to PATH
-export PATH="$PATH:$QUARTUSBIN_DIR:$QUESTABIN_DIR:$QSYSBIN_DIR:$NIOS2BIN_DIR"
+export PATH="$QUARTUSBIN_DIR:$QUESTABIN_DIR:$QSYSBIN_DIR:$NIOS2BIN_DIR:$PATH"
 
 
 #--------------APPS base dir--------------
