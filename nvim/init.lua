@@ -1,7 +1,6 @@
 -- global so it can be run remotely
 Reload_matugen_colors = require("functions.load_matugen_colors")
 
-
 -- Load lazy.vim
 require("config.lazy")
 require('config.general')

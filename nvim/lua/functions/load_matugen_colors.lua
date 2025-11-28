@@ -8,7 +8,7 @@ local function load_colorscheme(mode)
 	collectgarbage("collect")
 
 	if(mode == nil) then
-		mode = "max"
+		mode = "min"
 	end
 
 	local fpalette = require("assets.matugen_colors")
@@ -24,6 +24,8 @@ local function load_colorscheme(mode)
 
 	end
 
+	-- TODO: THESE COLORS LOOK HORRIBLE
+	-- NEED TO FIX THIS!
 	if(mode == "max") then
 		p = {
 			base00 = fpalette.background,
@@ -51,7 +53,6 @@ local function load_colorscheme(mode)
 		plugins = { default = true }
 	})
 
-
 	-- Make background equal to kitty's:
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -66,7 +67,6 @@ local function load_colorscheme(mode)
 		fg = fpalette.background }
 	)
 
-
 	vim.api.nvim_set_hl(0, 'Keyword',
 		{ fg = fpalette.primary }
 	)
@@ -75,7 +75,6 @@ local function load_colorscheme(mode)
 		{ bg = fpalette.surface_container_lowest,
 		  fg = fpalette.primary }
 	)
-
 
 	hl_group(
 		{ 'TSComment', 'Comment' },
@@ -92,6 +91,7 @@ local function load_colorscheme(mode)
 		{ fg = fpalette.secondary }
 	)
 
+  vim.api.nvim_set_hl(0, "Comment", { italic = true })
 end
 
 return load_colorscheme
