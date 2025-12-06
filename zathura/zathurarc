@@ -1,0 +1,23 @@
+" -----------------------------------------------------------------------------
+" Zathura settings
+" -----------------------------------------------------------------------------
+
+" Import Colors
+include matugen_colors.conf
+
+" Import Keybinds
+include keybinds.conf
+
+" Clipboard
+set selection-clipboard clipboard
+
+" Search
+set incremental-search true
+set search-hadjust true
+
+" Autoadjust
+set adjust-open width
+
+" Typography
+set font "FiraCode Nerd Font 12"
+

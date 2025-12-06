@@ -78,3 +78,8 @@ output_path = '~/.config/tampermonkey/ppx-matugen-colors.json'
 input_path = '~/.config/matugen/templates/generic/hex.lua.template'
 output_path = '~/.config/nvim/lua/assets/matugen_colors.lua'
 post_hook = 'bash ~/0/my-dotfiles/scripts/send-reload-command-to-nvim.sh'
+
+[templates.zathura]
+input_path = '~/.config/matugen/templates/zathura/zathura_colors.conf'
+output_path = '~/.config/zathura/matugen_colors.conf'
+
