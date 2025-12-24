@@ -3,7 +3,7 @@
 # Uses direct strings with hex rgb values so its easy
 # to cast them into rgb or rgba depending on the context
 #
-# template path: ~/.config/matugen/templates/generic/hex_str_hyprlang.template
+# template path: ~/.config/matugen/templates/languages/hex_str_hyprlang.template
 #
 
 
