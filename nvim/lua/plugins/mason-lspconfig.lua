@@ -1,4 +1,7 @@
-local server_names = {
+local concatenate_list = require("functions.concatenate_lists")
+
+local lsp_servers = {
+	"angularls",
 	"lua_ls",
 	"omnisharp",
 	"clangd",
@@ -10,10 +13,16 @@ local server_names = {
 	"ts_ls"
 }
 
+local dap_servers = {
+	"netcoredbg",
+}
+
+local all_servers = concatenate_list( {lsp_servers, dap_servers} )
+
 
 return {
 	"williamboman/mason-lspconfig.nvim",
-	opts = { ensure_installed = server_names },
+	opts = { ensure_installed = lsp_servers },
 	dependencies = {
 		{
 			"williamboman/mason.nvim",
@@ -24,7 +33,7 @@ return {
 		{
 			"neovim/nvim-lspconfig",
 			config = function()
-				vim.lsp.enable(server_names)
+				vim.lsp.enable(lsp_servers)
 				vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 				vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 				vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
