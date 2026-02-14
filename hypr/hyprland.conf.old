@@ -1,0 +1,37 @@
+$qsConfig = ii
+exec = hyprctl dispatch submap global # DO NOT REMOVE THIS OR YOU WON'T BE ABLE TO USE ANY KEYBIND
+submap = global # This is required for catchall to work
+
+
+# === Basic Input Output ===
+# Just make sure the system is useable
+source=~/.config/hypr/hyprland/input.conf
+source=~/.config/hypr/hyprland/monitors.conf
+
+
+
+# === Default Variables ===
+# Usually shared between multiple configs
+source=~/.config/hypr/matugen_colors.conf
+source=~/.config/hypr/hyprland/env.conf
+source=~/.config/hypr/hyprland/preferences.conf
+
+# Defaults
+source=~/.config/hypr/hyprland/execs.conf
+source=~/.config/hypr/hyprland/general.conf
+source=~/.config/hypr/hyprland/rules.conf
+source=~/.config/hypr/hyprland/keybinds.conf
+source=~/.config/hypr/hyprland/groups.conf
+
+source=~/.config/hypr/hyprland/user-exec.conf
+
+# nwg-displays support
+source=workspaces.conf
+source=hyprland/monitors.conf
+
+# media folders
+env = XDG_CONFIG_HOME,$HOME/.config
+env = XDG_DATA_HOME,$HOME/.local/share
+env = XDG_CACHE_HOME,$HOME/.cache
+env = XDG_STATE_HOME,$HOME/.local/state
+

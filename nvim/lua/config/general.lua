@@ -44,13 +44,6 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
--- Sync clipboards
-vim.api.nvim_create_autocmd('UIEnter', {
-	callback = function()
-		vim.o.clipboard = 'unnamedplus'
-	end,
-})
-
 
 -- Mason DAP
 local dap, dapui = require("dap"), require("dapui")

@@ -17,13 +17,13 @@
 --       ╰────────────────────╯
 --
 -- These were stolen from the primeagen
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=g")
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=g")
-vim.keymap.set('n', 'J', "mzJ`z")
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-vim.keymap.set('n', 'n', 'nzzzv')
-vim.keymap.set('n', 'N', 'Nzzzv')
+-- vim.keymap.set('v', 'j', ":m '>+1<cr>gv=g")
+-- vim.keymap.set('v', 'K', ":m '<-2<CR>gv=g")
+-- vim.keymap.set('n', 'J', "mzJ`z")
+-- vim.keymap.set('n', '<C-d>', '<C-d>zz')
+-- vim.keymap.set('n', '<C-u>', '<C-u>zz')
+-- vim.keymap.set('n', 'n', 'nzzzv')
+-- vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Adds lines without getting out of normal mode
 vim.keymap.set('n', 'zj', 'o<Esc>k')
