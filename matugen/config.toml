@@ -68,7 +68,7 @@ output_path = '~/Documentos/obsidian-sync/vault/.obsidian/themes/Matugen/theme.c
 [templates.pywalfox]
 input_path = '~/.config/matugen/templates/pywalfox/pywalfox-colors.json'
 output_path = '~/.cache/wal/colors.json'
-post_hook = 'pywalfox update'
+#post_hook = 'pywalfox update'
 
 [templates.vscode]
 input_path = '~/.config/matugen/templates/vscode/vscode-color-theme.json'
@@ -82,3 +82,8 @@ output_path = '~/.config/tampermonkey/ppx-matugen-colors.json'
 input_path = '~/.config/matugen/templates/generic/hex.lua.template'
 output_path = '~/.config/nvim/lua/assets/matugen_colors.lua'
 post_hook = 'bash ~/0/my-dotfiles/scripts/send-reload-command-to-nvim.sh'
+
+[tmux]
+input_path = '~/.config/matugen/templates/generic/hex.bash.template'
+output_path = '~/.local/share/matugen-shared-outputs'
+post_hook = ''
