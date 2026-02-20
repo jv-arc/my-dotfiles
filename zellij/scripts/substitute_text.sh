@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+TARGET_PATH="$HOME/.config/zellij/config.kdl"
+SUBSTITUTION_ORIGIN="$HOME/.config/zellij/scripts/generated_colors.txt"
+
+REGION="MATUGEN_COLORS"
+
+
+
+COMMENT="\/\/"
+START_PREFIX="START_REGION:"
+END_PREFIX="END_REGION:"
+
+
+#Spaces for readability must match config.kdl
+START_MARK="$COMMENT $START_PREFIX $REGION"
+END_MARK="$COMMENT $END_PREFIX $REGION"
+
+
+sed -i.bak "/$START_MARK/,/$END_MARK/{//!d}" "$TARGET_PATH"
+sed -i "/$START_MARK/r $SUBSTITUTION_ORIGIN" "$TARGET_PATH"
+
+

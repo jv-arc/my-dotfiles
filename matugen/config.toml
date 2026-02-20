@@ -37,6 +37,7 @@ output_path = '~/.local/state/quickshell/user/generated/colors.json'
 [templates.hyprlang]
 input_path = '~/.config/matugen/templates/languages/hex_str.hyprlang.template'
 output_path = '~/.config/hypr/matugen_colors.conf'
+
 [templates.hyprlock]
 input_path = '~/.config/matugen/templates/hyprland/hyprlock-colors.conf'
 output_path = '~/.config/hypr/hyprlock/colors.conf'
@@ -65,14 +66,14 @@ output_path = '~/.local/state/quickshell/user/generated/wallpaper/path.txt'
 input_path = '~/.config/matugen/templates/obsidian/theme.css'
 output_path = '~/Documentos/obsidian-sync/vault/.obsidian/themes/Matugen/theme.css'
 
-[templates.pywalfox]
-input_path = '~/.config/matugen/templates/pywalfox/pywalfox-colors.json'
-output_path = '~/.cache/wal/colors.json'
-post_hook = 'pywalfox update'
+#[templates.pywalfox]
+#input_path = '~/.config/matugen/templates/pywalfox/pywalfox-colors.json'
+#output_path = '~/.cache/wal/colors.json'
+#post_hook = 'pywalfox update'
 
-[templates.vscode]
-input_path = '~/.config/matugen/templates/vscode/vscode-color-theme.json'
-output_path = '~/.vscode/extensions/hyprluna.hyprluna-theme-1.0.2/themes/hyprluna.json'
+#[templates.vscode]
+#input_path = '~/.config/matugen/templates/vscode/vscode-color-theme.json'
+#output_path = '~/.vscode/extensions/hyprluna.hyprluna-theme-1.0.2/themes/hyprluna.json'
 
 [templates.perplexity]
 input_path = '~/.config/matugen/templates/perplexity/ppx-matugen-colors.json'
@@ -83,7 +84,16 @@ input_path = '~/.config/matugen/templates/languages/hex.lua.template'
 output_path = '~/.config/nvim/lua/assets/matugen_colors.lua'
 post_hook = 'bash ~/0/my-dotfiles/scripts/send-reload-command-to-nvim.sh'
 
-[templates.zathura]
-input_path = '~/.config/matugen/templates/zathura/zathura_colors.conf'
-output_path = '~/.config/zathura/matugen_colors.conf'
+#[templates.zathura]
+#input_path = '~/.config/matugen/templates/zathura/zathura_colors.conf'
+#output_path = '~/.config/zathura/matugen_colors.conf'
 
+[templates.zellij]
+input_path = '~/.config/matugen/templates/zellij/template.kdl'
+output_path = '~/.config/zellij/themes/matugen.kdl'
+
+
+#[templates.zellijstatus]
+# input_path = '~/.config/matugen/templates/zellij/template.kdl'
+# output_path = '~/.config/zellij/themes/matugen.kdl'
+# post_hook:

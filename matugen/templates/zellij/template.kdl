@@ -1,0 +1,15 @@
+themes {
+  matugen {
+    bg "#5b6078" // Surface2
+    fg   "{{colors.on_background.default.hex}}"// Text
+    red   "{{colors.error.default.hex}}"
+		green   "{{colors.primary_fixed_dim.default.hex}}"
+    blue   "{{colors.secondary_fixed_dim.default.hex}}"
+    yellow   "{{colors.tertiary_fixed_dim.default.hex}}"
+    magenta   "{{colors.secondary.default.hex}}"
+    orange  "{{colors.primary.default.hex}}"
+    cyan   "{{colors.tertiary.default.hex}}"
+    black  "{{colors.background.default.hex}}"
+    white  "{{colors.on_background.default.hex}}"// Text
+  }
+}
