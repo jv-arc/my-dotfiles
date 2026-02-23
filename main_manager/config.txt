@@ -1,0 +1,8 @@
+hypr
+matugen
+tampermonkey
+nvim
+fish
+kitty
+zathura
+zellij

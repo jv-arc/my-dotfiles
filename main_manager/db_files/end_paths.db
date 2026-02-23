@@ -1,0 +1,7 @@
+hypr='$CONFIG/hypr'
+matugen='$CONFIG/matugen'
+tampermonkey='$CONFIG/tampermonkey'
+nvim='$CONFIG/nvim'
+fish='$CONFIG/fish'
+kitty='$CONFIG/kitty'
+zathura='$CONFIG/zathura'
