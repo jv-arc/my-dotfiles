@@ -89,11 +89,12 @@ post_hook = 'bash ~/0/my-dotfiles/scripts/send-reload-command-to-nvim.sh'
 #output_path = '~/.config/zathura/matugen_colors.conf'
 
 [templates.zellij]
-input_path = '~/.config/matugen/templates/zellij/template.kdl'
+input_path = '~/.config/matugen/templates/zellij/theme.kdl'
 output_path = '~/.config/zellij/themes/matugen.kdl'
 
 
-#[templates.zellijstatus]
-# input_path = '~/.config/matugen/templates/zellij/template.kdl'
-# output_path = '~/.config/zellij/themes/matugen.kdl'
-# post_hook:
+[templates.zjstatus]
+input_path = '~/.config/matugen/templates/zellij/colors.kdl'
+output_path = '~/.config/zellij/scripts/generated_colors.txt'
+post_hook = '~/.config/zellij/sctipts/substitute_text.sh'
+
