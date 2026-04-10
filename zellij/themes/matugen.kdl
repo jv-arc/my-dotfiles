@@ -1,15 +1,15 @@
 themes {
   matugen {
     bg "#5b6078" // Surface2
-    fg   "#f2dfd1"// Text
+    fg   "#e6e1e3"// Text
     red   "#ffb4ab"
-		green   "#c6c0ff"
-    blue   "#b1cfa9"
-    yellow   "#94d4b8"
-    magenta   "#b1cfa9"
-    orange  "#c6c0ff"
-    cyan   "#94d4b8"
-    black  "#1a1209"
-    white  "#f2dfd1"// Text
+		green   "#ccc2dc"
+    blue   "#cac4cf"
+    yellow   "#e1bdca"
+    magenta   "#cac4cf"
+    orange  "#ccc2dc"
+    cyan   "#e1bdca"
+    black  "#141315"
+    white  "#e6e1e3"// Text
   }
 }

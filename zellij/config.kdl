@@ -256,89 +256,100 @@ keybinds clear-defaults=true {
 // Plugin aliases - can be used to change the implementation of Zellij
 // changing these requires a restart to take effect
 plugins {
-    about location="zellij:about"
-    compact-bar location="zellij:compact-bar"
-    configuration location="zellij:configuration"
-    filepicker location="zellij:strider" {
-        cwd "/"
-    }
-    plugin-manager location="zellij:plugin-manager"
-    session-manager location="zellij:session-manager"
-    status-bar location="zellij:status-bar"
-    strider location="zellij:strider"
-    tab-bar location="zellij:tab-bar"
-    welcome-screen location="zellij:session-manager" {
-        welcome_screen true
-    }
-		zjstatus location="file:~/.local/share/zellij/plugins/zjstatus.wasm" {
+	about location="zellij:about"
+	compact-bar location="zellij:compact-bar"
+	configuration location="zellij:configuration"
+
+	filepicker location="zellij:strider" {
+		cwd "/"
+	}
+
+	plugin-manager location="zellij:plugin-manager"
+	session-manager location="zellij:session-manager"
+	status-bar location="zellij:status-bar"
+	strider location="zellij:strider"
+	tab-bar location="zellij:tab-bar"
+
+	welcome-screen location="zellij:session-manager" {
+		welcome_screen true
+	}
+
+	//autolock location="file:~/.config/zellij/plugins/zellij-autolock.wasm" {
+	//	is_enabled true
+	//	triggers "nvim"
+	//	reaction_seconds 0.3
+	//	print_to_log true
+	//}
+
+	zjstatus location="file:~/.local/share/zellij/plugins/zjstatus.wasm" {
 
 
 		// START_REGION: MATUGEN_COLORS
-    color_flamingo "#f0c6c6"
-    color_pink "#f5bde6"
-    color_mauve "#c6a0f6"
-    color_red "#ed8796"
-    color_maroon "#ee99a0"
-    color_peach "#faf4ed"
-    color_yellow "#eed49f"
-    color_green "#a6da95"
-    color_teal "#8bd5ca"
-    color_sapphire "#7dc4e4"
-    color_blue "#8aadf4"
+		color_flamingo "#f0c6c6"
+		color_pink "#f5bde6"
+		color_mauve "#c6a0f6"
+		color_red "#ed8796"
+		color_maroon "#ee99a0"
+		color_peach "#faf4ed"
+		color_yellow "#eed49f"
+		color_green "#a6da95"
+		color_teal "#8bd5ca"
+		color_sapphire "#7dc4e4"
+		color_blue "#8aadf4"
 		// END_REGION: MATUGEN_COLORS
 
-    format_left "#[fg=$sapphire,bold]zellij:{session} {mode}   {tabs}"
-    format_center "#[fg=$flamingo,bold]{notifications}"
-    format_right "#[fg=$maroon,bold] 󰃭 {datetime}"
-    format_space ""
-    format_hide_on_overlength "true"
-    format_precedence "lrc"
-    border_enabled "true"
-    border_char "0"
-    border_format "{char}"
-    border_position "top"
-    hide_frame_for_single_pane "false"
-    mode_normal "#[fg=$green,bold] <NORMAL>"
-    mode_tmux "#[fg=$mauve,bold] <TMUX>"
-    mode_locked "#[fg=$red,bold] <LOCKED >"
-    mode_pane "#[fg=$teal,bold] <PANE>"
-    mode_tab "#[fg=$teal,bold] <TAB>"
-    mode_scroll "#[fg=$flamingo,bold] <SCROLL>"
-    mode_enter_search "#[fg=$flamingo,bold] <ENT-SEARCH>"
-    mode_search "#[fg=$flamingo,bold] <SEARCHARCH>"
-    mode_resize "#[fg=$yellow,bold] <RESIZE>"
-    mode_rename_tab "#[bg=$yellow,bold] <RENAME-TAB>"
-    mode_rename_pane "#[bg=$yellow,bold] <RENAME-PANE>"
-    mode_move "#[fg=$yellow,bold] <MOVE>"
-    mode_session "#[fg=$pink,bold] <SESSION>"
-    mode_prompt "#[bg=$pink,bold] <PROMPT>"
-    tab_normal "#[fg=$blue]{index} {name}{floating_indicator}"
-    tab_normal_fullscreen "#[fg=$blue]{index} {name}{fullscreen_indicator}"
-    tab_normal_sync "#[fg=$blue]{index} {name}{sync_indicator}"
-    tab_active "#[fg=$peach]{index} {name}{floating_indicator}"
-    tab_active_fullscreen "#[fg=$peach]{index} {name}{fullscreen_indicator}"
-    tab_active_sync "#[fg=$peach]{index} {name}{sync_indicator}"
-    tab_separator "|"
-    tab_sync_indicator " "
-    tab_fullscreen_indicator " 󰊓"
-    tab_floating_indicator " 󰹙"
-    notification_format_unread "#[fg=$yellow]  {message}"
-    notification_format_no_notifications ""
-    notification_show_interval "10"
-    command_host_command "uname -n"
-    command_host_format "{stdout}"
-    command_host_interval "0"
-    command_host_rendermode "static"
-    command_user_command "whoami"
-    command_user_format "{stdout}"
-    command_user_interval "10"
-    command_user_rendermode "static"
+		format_left "#[fg=$sapphire,bold]zellij:{session} {mode}   {tabs}"
+		format_center "#[fg=$flamingo,bold]{notifications}"
+		format_right "#[fg=$maroon,bold] 󰃭 {datetime}"
+		format_space ""
+		format_hide_on_overlength "true"
+		format_precedence "lrc"
+		border_enabled "true"
+		border_char "0"
+		border_format "{char}"
+		border_position "top"
+		hide_frame_for_single_pane "false"
+		mode_normal "#[fg=$green,bold] <NORMAL>"
+		mode_tmux "#[fg=$mauve,bold] <TMUX>"
+		mode_locked "#[fg=$red,bold] <LOCKED >"
+		mode_pane "#[fg=$teal,bold] <PANE>"
+		mode_tab "#[fg=$teal,bold] <TAB>"
+		mode_scroll "#[fg=$flamingo,bold] <SCROLL>"
+		mode_enter_search "#[fg=$flamingo,bold] <ENT-SEARCH>"
+		mode_search "#[fg=$flamingo,bold] <SEARCHARCH>"
+		mode_resize "#[fg=$yellow,bold] <RESIZE>"
+		mode_rename_tab "#[bg=$yellow,bold] <RENAME-TAB>"
+		mode_rename_pane "#[bg=$yellow,bold] <RENAME-PANE>"
+		mode_move "#[fg=$yellow,bold] <MOVE>"
+		mode_session "#[fg=$pink,bold] <SESSION>"
+		mode_prompt "#[bg=$pink,bold] <PROMPT>"
+		tab_normal "#[fg=$blue]{index} {name}{floating_indicator}"
+		tab_normal_fullscreen "#[fg=$blue]{index} {name}{fullscreen_indicator}"
+		tab_normal_sync "#[fg=$blue]{index} {name}{sync_indicator}"
+		tab_active "#[fg=$peach]{index} {name}{floating_indicator}"
+		tab_active_fullscreen "#[fg=$peach]{index} {name}{fullscreen_indicator}"
+		tab_active_sync "#[fg=$peach]{index} {name}{sync_indicator}"
+		tab_separator "|"
+		tab_sync_indicator " "
+		tab_fullscreen_indicator " 󰊓"
+		tab_floating_indicator " 󰹙"
+		notification_format_unread "#[fg=$yellow]  {message}"
+		notification_format_no_notifications ""
+		notification_show_interval "10"
+		command_host_command "uname -n"
+		command_host_format "{stdout}"
+		command_host_interval "0"
+		command_host_rendermode "static"
+		command_user_command "whoami"
+		command_user_format "{stdout}"
+		command_user_interval "10"
+		command_user_rendermode "static"
 
 		// Hora
-    datetime "{format}"
-    datetime_format "%A, %B %d %H:%M"
-    datetime_timezone "America/Sao_Paulo"
-		}
+		datetime "{format}"
+		datetime_format "%A, %B %d %H:%M"
+		datetime_timezone "America/Sao_Paulo"
+	}
 }
 
 
@@ -348,9 +359,44 @@ plugins {
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
+	autolock
 }
 web_client {
     font "monospace"
+}
+
+keybinds {
+	locked {
+		bind "Alt z" {
+			MessagePlugin "autolock" {payload "disable";};
+			SwitchToMode "normal";
+		}
+	}
+
+	shared_except "locked" {
+		// Put keybindings here if they conflict with Vim or others.
+
+		bind "Alt z" {
+			// Disable the autolock plugin.
+			MessagePlugin "autolock" {payload "disable";};
+			// Lock Zellij.
+			SwitchToMode "Locked";
+		}
+
+		bind "Ctrl h" {
+			MoveFocusOrTab "Left";
+		}
+		bind "Ctrl l" {
+			MoveFocusOrTab "Right";
+		}
+		bind "Ctrl j" {
+			MoveFocus "Down";
+		}
+		bind "Ctrl k" {
+			MoveFocus "Up";
+		}
+	}
+
 }
  
 // Use a simplified UI without special fonts (arrow glyphs)

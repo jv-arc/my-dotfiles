@@ -1,4 +1,8 @@
-local function hexToChroma(hexColor)
+local function hexToChroma(hexColor, minChroma)
+	if minChroma == nil then
+		minChroma = 0
+	end
+
 	hexColor = hexColor:gsub("#", "")
 
 	local r = tonumber(hexColor:sub(1, 2), 16)
@@ -48,7 +52,7 @@ local function hexToChroma(hexColor)
 	local a = 500 * (fx - fy)
 	local b_lab = 200 * (fy - fz)
 
-	local chroma = 2*math.sqrt(a * a + b_lab * b_lab)
+	local chroma = math.max(2*math.sqrt(a * a + b_lab * b_lab),minChroma)
 
 	return chroma
 end

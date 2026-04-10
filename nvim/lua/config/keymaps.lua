@@ -12,27 +12,19 @@
 --       ╚══════════════════════════════════════════════════════════════╝
 
 
---       ╭────────────────────╮
---       │ General Navigation │
---       ╰────────────────────╯
---
--- These were stolen from the primeagen
--- vim.keymap.set('v', 'j', ":m '>+1<cr>gv=g")
--- vim.keymap.set('v', 'K', ":m '<-2<CR>gv=g")
--- vim.keymap.set('n', 'J', "mzJ`z")
--- vim.keymap.set('n', '<C-d>', '<C-d>zz')
--- vim.keymap.set('n', '<C-u>', '<C-u>zz')
--- vim.keymap.set('n', 'n', 'nzzzv')
--- vim.keymap.set('n', 'N', 'Nzzzv')
+local KM = {}
 
--- Adds lines without getting out of normal mode
-vim.keymap.set('n', 'zj', 'o<Esc>k')
-vim.keymap.set('n', 'zk', 'O<Esc>j')
 
--- other
 vim.keymap.set('n', '<leader>fp', ':NeovimProjectDiscover default<CR><Esc>')
 vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal toggle left<CR>')
 
+
+KM.zellij = function()
+	vim.keymap.set('n', "<c-h>", "<cmd>ZellijNavigateLeftTab<cr>",  { silent = true, desc = "navigate left or tab"  })
+	vim.keymap.set('n', "<c-j>", "<cmd>ZellijNavigateDown<cr>",  { silent = true, desc = "navigate down"  })
+	vim.keymap.set('n', "<c-k>", "<cmd>ZellijNavigateUp<cr>",    { silent = true, desc = "navigate up"    })
+	vim.keymap.set('n', "<c-l>", "<cmd>ZellijNavigateRightTab<cr>", { silent = true, desc = "navigate right or tab" })
+end
 
 
 
@@ -43,25 +35,30 @@ vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal toggle left<CR>')
 --     │ Snacks' Terminal │
 --     ╰──────────────────╯
 --
--- To get out of the terminal easiear
-vim.keymap.set('t', '<Esc><Esc>', [[<C-\>,C-n>]])
+KM.snacks_terminal = {}
+local st = KM.snacks_terminal
 
--- To toggle terminal status
-vim.keymap.set('n', '<leader>t', function()
-	Snacks.terminal.toggle(
-		"fish",
-		{
-			win = {
-				style = "terminal" ,
-				position = "bottom",
-				height = 0.2,
-			},
+-- To get out of the terminal easiear
+st.easy_get_out = function()
+	vim.keymap.set('t', '<Esc><Esc>', [[<C-\>,C-n>]])
+end
+
+	-- To toggle terminal status
+st.toggle = function()
+	vim.keymap.set('n', '<leader>t', function()
+		Snacks.terminal.toggle( "fish", { win = {
+			style = "terminal" ,
+			position = "bottom",
+			height = 0.2, },
 			cwd = vim.fn.getcwd(),
-			interactive = false,
-		}
-	)
-	end
-)
+			interactive = false, })
+		end)
+end
+
+st.set = function()
+	st.easy_get_out()
+	st.toggle()
+end
 
 
 
@@ -85,25 +82,56 @@ vim.keymap.set('n', '<leader>t', function()
 --        │ Comment-Box │
 --        ╰─────────────╯
 
-local cb_opts = {noremap = true, silent = true }
+KM.comment_box = {}
+local cb = KM.comment_box
 
 -- Main box keymaps
-vim.keymap.set({'n', 'v'}, '<leader>cb1', '<Cmd>CBlabox7<CR>', cb_opts, {desc = 'Double line box'})
-vim.keymap.set({'n', 'v'}, '<leader>cb2', '<Cmd>CBlabox1<CR>', cb_opts, {desc = 'Simple round box'})
-vim.keymap.set({'n', 'v'}, '<leader>cb3', '<Cmd>CBlabox18<CR>', cb_opts, {desc = 'Box with side brackets'})
+cb.main_box = function ()
+	vim.keymap.set({'n', 'v'}, '<leader>cb1', '<Cmd>CBlabox7<CR>',
+		{noremap = true, silent=true}, {desc = 'Double line box'}
+	)
+	vim.keymap.set({'n', 'v'}, '<leader>cb2', '<Cmd>CBlabox1<CR>',
+		{noremap = true, silent=true}, {desc = 'Simple round box'}
+	)
+	vim.keymap.set({'n', 'v'}, '<leader>cb3', '<Cmd>CBlabox18<CR>',
+		{noremap = true, silent=true}, {desc = 'Box with side brackets'}
+	)
+end
 
 -- Main line keymaps
-vim.keymap.set({'n', 'v'}, '<leader>cl1', '<Cmd>CBllline1<CR>', cb_opts, {desc = 'simple line'})
-vim.keymap.set({'n', 'v'}, '<leader>cl2', '<Cmd>CBllline2<CR>', cb_opts, {desc = 'curved line beginning'})
-vim.keymap.set({'n', 'v'}, '<leader>cl3', '<Cmd>CBlrline3<CR>', cb_opts, {desc = ' curved line end'})
+cb.main_line = function ()
+	vim.keymap.set({'n', 'v'}, '<leader>cl1', '<Cmd>CBllline1<CR>',
+		{noremap = true, silent=true}, {desc = 'simple line'}
+	)
+	vim.keymap.set({'n', 'v'}, '<leader>cl2', '<Cmd>CBllline2<CR>',
+		{noremap = true, silent=true}, {desc = 'curved line beginning'}
+	)
+	vim.keymap.set({'n', 'v'}, '<leader>cl3', '<Cmd>CBlrline3<CR>',
+		{noremap = true, silent=true}, {desc = ' curved line end'}
+	)
+end
 
 -- Auxilliar keymaps
-vim.keymap.set({'n','v'}, '<leader>cy', '<Cmd>CBy<CR>', cb_opts, {desc = 'copy text inside box/line'})
-vim.keymap.set({'n','v'}, '<leader>cd', '<Cmd>CBd<CR>', cb_opts, {desc = 'delete box'})
+cb.auxiliar =  function ()
+	vim.keymap.set({'n','v'}, '<leader>cy', '<Cmd>CBy<CR>', {noremap = true, silent=true}, {desc = 'copy text inside box/line'})
+	vim.keymap.set({'n','v'}, '<leader>cd', '<Cmd>CBd<CR>', {noremap = true, silent=true}, {desc = 'delete box'})
+end
 
 -- Max box size setup
+cb.max_box = function ()
 require("comment-box").setup({
 	box_width = 100,
 	document_width = 100,
 })
+end
 
+cb.set = function()
+	cb.main_box()
+	cb.main_line()
+	cb.auxiliar()
+	cb.max_box()
+end
+
+
+
+return KM

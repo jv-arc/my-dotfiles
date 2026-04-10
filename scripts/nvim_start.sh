@@ -5,4 +5,5 @@ if [ -f ~/.local/state/quickshell/user/generated/terminal/sequences.txt ]; then
 	cat ~/.local/state/quickshell/user/generated/terminal/sequences.txt
 fi
 
-exec "nvim"
+echo 'a'
+exec "zellij -n dev"

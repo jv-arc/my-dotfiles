@@ -10,6 +10,7 @@ return {
 					"cpp",
 					"lua",
 					"make",
+					"angular",
 					"css",
 					"bash",
 					"asm",

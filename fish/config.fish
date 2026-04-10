@@ -26,6 +26,9 @@ if status is-interactive # Commands to run in interactive sessions can go here
 
 
 set -x EDITOR nvim
+set -x PATH /home/jvctr/bin $PATH
+set -x PATH /home/jvctr/.cargo/bin $PATH
+
 end
 
 source  ~/.venv_manager/fish_entry.fish

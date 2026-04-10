@@ -19,9 +19,8 @@ local function load_colorscheme(mode)
 		p = require("mini.base16").mini_palette(
 			fpalette.surface,
 			fpalette.on_surface,
-			h2c(fpalette.primary)
+			h2c(fpalette.primary,50)
 		)
-
 	end
 
 	-- TODO: THESE COLORS LOOK HORRIBLE
